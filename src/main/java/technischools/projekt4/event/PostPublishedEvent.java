@@ -4,7 +4,7 @@ import org.springframework.context.ApplicationEvent;
 import technischools.projekt4.model.Post;
 
 public class PostPublishedEvent extends ApplicationEvent {
-    private Post post;
+    private final Post post;
 
     public PostPublishedEvent(Object source, Post post) {
         super(source);

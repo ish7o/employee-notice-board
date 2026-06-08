@@ -31,8 +31,7 @@ Content-Type: application/json
   "content": "Spring Boot makes it easy to create stand-alone, production-grade Spring-based Applications.",
   "category": "INFO",
   "author": "John Doe",
-  "pinned": false,
-  "createdAt": "2026-06-07T20:00:00"
+  "pinned": false
 }
 
 ### 6. Update an existing post
@@ -44,8 +43,7 @@ Content-Type: application/json
   "content": "Updated content showing how easy it is to use Spring Boot.",
   "category": "URGENT",
   "author": "John Doe",
-  "pinned": true,
-  "createdAt": "2026-06-07T20:00:00"
+  "pinned": true
 }
 
 ### 7. Delete a post by ID
@@ -66,7 +64,6 @@ Content-Type: application/json
 {
   "content": "Great post! Extremely helpful.",
   "author": "Jane Smith",
-  "createdAt": "2026-06-07T20:05:00",
   "post": {
     "id": 1
   }

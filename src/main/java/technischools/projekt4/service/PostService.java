@@ -8,6 +8,7 @@ import technischools.projekt4.model.Post;
 import technischools.projekt4.model.PostCategory;
 import technischools.projekt4.repository.PostRepository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.StreamSupport;
 
@@ -38,6 +39,7 @@ public class PostService implements PostServiceInterface {
     }
 
     public Post createPost(Post post) {
+        post.setCreatedAt(LocalDateTime.now());
         Post savedPost = repository.save(post);
         eventPublisher.publishEvent(new PostPublishedEvent(this, savedPost));
         return savedPost;

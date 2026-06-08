@@ -5,11 +5,12 @@ import technischools.projekt4.exception.ResourceNotFoundException;
 import technischools.projekt4.model.Comment;
 import technischools.projekt4.repository.CommentRepository;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
 public class CommentService implements CommentServiceInterface {
-    private CommentRepository repository;
+    private final CommentRepository repository;
 
     public CommentService(CommentRepository repository) {
         this.repository = repository;
@@ -20,6 +21,7 @@ public class CommentService implements CommentServiceInterface {
     }
 
     public Comment createComment(Comment comment) {
+        comment.setCreatedAt(LocalDateTime.now());
         return repository.save(comment);
     }
 
